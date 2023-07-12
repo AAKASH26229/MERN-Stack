@@ -68,8 +68,8 @@ function App() {
 
   return (
     <div>
-      <h1>Restaurant Menu</h1>
-      <table {...getTableProps()} style={{ borderCollapse: 'collapse' }}>
+      <h1 style={{textAlign:'center'}}>Restaurant Menu</h1>
+      <table {...getTableProps()} style={{ borderCollapse: 'collapse' , textAlign:'center', marginLeft:'auto', marginRight:'auto'}}>
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
