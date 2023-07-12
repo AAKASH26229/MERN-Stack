@@ -111,6 +111,11 @@ function App() {
           })}
         </tbody>
       </table>
+          <div style={{alignItems:'center', justifyContent:'center', display:'flex', marginTop:'50px'}}>
+        <button  type='submit' style={{background:'black', color:'white', width:'50px',cursor:'none' }}>Save</button>
+
+          </div>
+
     </div>
   );
 }
