@@ -10,11 +10,13 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Connect to MongoDB database
-mongoose.connect('mongodb://localhost:27017/restaurant', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  connectTimeoutMS: 30000, // Increase timeout to 30 seconds (adjust as needed)
-})
+
+mongoose.connect("mongodb://127.0.0.1:27017/restaurant",{useNewUrlParser:true, useUnifiedTopology: true })
+// mongoose.connect('mongodb://localhost:27017/restaurant', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+//   connectTimeoutMS: 30000, // Increase timeout to 30 seconds (adjust as needed)
+// })
 
   .then(() => {
     console.log('Connected to MongoDB');
@@ -40,8 +42,11 @@ const MenuItem = mongoose.model('MenuItem', menuItemSchema);
 // Define API routes
 app.get('/api/menu', async (req, res) => {
   try {
+    console.log("Testiing!");
     const menuItems = await MenuItem.find();
     res.json(menuItems);
+  
+
   } catch (error) {
     console.log('Error retrieving menu items:', error);
     res.status(500).json({ error: 'Failed to retrieve menu items' });
