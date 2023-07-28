@@ -11,7 +11,7 @@ app.use(cors());
 
 // Connect to MongoDB database
 
-mongoose.connect("mongodb://127.0.0.1:27017/restaurant",{useNewUrlParser:true, useUnifiedTopology: true })
+mongoose.connect("mongodb://mern-stack-eued.vercel/restaurant",{useNewUrlParser:true, useUnifiedTopology: true })
 // mongoose.connect('mongodb://localhost:27017/restaurant', {
 //   useNewUrlParser: true,
 //   useUnifiedTopology: true,
