@@ -7,11 +7,21 @@ const app = express();
 const PORT = 5000;
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors(
+  origin:["https://mern-stack-eued.vercel.app"],
+  methods: ["POST","GET"]
+  credentials: true
+));
 
+const MONGO_USERNAME = 'your_username';
+const MONGO_PASSWORD = 'your_password';
+const MONGO_HOST = 'localhost';
+const MONGO_PORT = 27017;
+const MONGO_DB = 'restaurant';
 // Connect to MongoDB database
-
-mongoose.connect("mongodb://mern-stack-eued.vercel/restaurant",{useNewUrlParser:true, useUnifiedTopology: true })
+//mongoose.connect("mongodb://127.0.0.1:27017")username:password@localhost:27017/mydatabase
+mongoose.connect("mongodb://127.0.0.1:27017/restaurant",{useNewUrlParser:true, useUnifiedTopology: true })
+//  mongoose.connect(`mongodb://${}:${MONGO_PASSWORD}@${MONGO_HOST}:${MONGO_PORT}/${MONGO_DB}`)
 // mongoose.connect('mongodb://localhost:27017/restaurant', {
 //   useNewUrlParser: true,
 //   useUnifiedTopology: true,
