@@ -13,11 +13,11 @@ app.use(cors(
   credentials: true
 ));
 
-const MONGO_USERNAME = 'your_username';
-const MONGO_PASSWORD = 'your_password';
-const MONGO_HOST = 'localhost';
-const MONGO_PORT = 27017;
-const MONGO_DB = 'restaurant';
+// const MONGO_USERNAME = 'your_username';
+// const MONGO_PASSWORD = 'your_password';
+// const MONGO_HOST = 'localhost';
+// const MONGO_PORT = 27017;
+// const MONGO_DB = 'restaurant';
 // Connect to MongoDB database
 //mongoose.connect("mongodb://127.0.0.1:27017")username:password@localhost:27017/mydatabase
 mongoose.connect("mongodb://127.0.0.1:27017/restaurant",{useNewUrlParser:true, useUnifiedTopology: true })
