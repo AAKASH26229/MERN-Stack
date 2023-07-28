@@ -7,11 +7,11 @@ const app = express();
 const PORT = 5000;
 
 app.use(bodyParser.json());
-app.use(cors());
-//   origin:["https://mern-stack-eued.vercel.app"],
-//   methods: ["POST","GET"]
-//   credentials: true
-// ));
+app.use(cors(
+  origin:["https://mern-stack-eued.vercel.app"],
+  methods: ["POST","GET"]
+  credentials: true
+));
 
 // const MONGO_USERNAME = 'your_username';
 // const MONGO_PASSWORD = 'your_password';
